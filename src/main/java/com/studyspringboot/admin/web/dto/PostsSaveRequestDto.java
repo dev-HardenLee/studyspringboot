@@ -28,3 +28,24 @@ public class PostsSaveRequestDto {
     }
 
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
