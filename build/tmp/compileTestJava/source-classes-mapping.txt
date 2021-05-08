@@ -1,0 +1,2 @@
+com/studyspringboot/admin/web/HelloControllerTest.java
+ com.studyspringboot.admin.web.HelloControllerTest
