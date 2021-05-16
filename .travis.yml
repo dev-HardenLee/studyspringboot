@@ -9,6 +9,22 @@ branches:
 before_install:
   - chmod +x gradlew
 
+before_deploy:
+  - zip -r studyspringboot *
+  - mkdir -p deploy
+  - mv studyspringboot.zip deploy/studyspringboot.zip
+deploy:
+  - provider: s3
+    access_key_id: $AWS_ACCESS_KEY
+    secret_access_key: $AWS_SECRET_KEY
+
+    bucket: spring-boot-build-zip
+    region: ap-northeast-2
+    skip_cleanup: true
+    acl: private
+    local_dir: deploy
+    wait-until-deployed: true
+
 # Travis CI 서버의 HOME
 cache:
   directories:
